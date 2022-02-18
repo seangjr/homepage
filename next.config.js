@@ -1,6 +1,7 @@
 module.exports = {
-  reactStrictMode: true,
-  images: {
-    domains: ["images.unsplash.com"],
-  },
+    reactStrictMode: true,
+    images: {
+        domains: ["images.unsplash.com"],
+    },
+    distDir: "build",
 };
