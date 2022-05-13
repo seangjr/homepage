@@ -4,7 +4,6 @@ const ProjectImageStyled = styled.img`
   position: fixed;
   left: 60vw;
   width: 300px;
-  height: clamp(200px, 20vw, 20vw);
   object-fit: cover;
   top: 30vh;
   pointer-events: none;
