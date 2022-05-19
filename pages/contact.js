@@ -12,22 +12,20 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 import Section from "../components/section";
-import { useState } from "react";
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef()
   const [submitted, setSubmitted] = useState(false);
   async function handleOnSubmit(e) {
     e.preventDefault();
-    const formData = {};
-    Array.from(e.currentTarget.elements).forEach((field) => {
-      if (!field.name) return;
-      formData[field.name] = field.value;
+    emailjs.sendForm(process.env.NEXT_PUBLIC_EJS_SERVICE_ID, process.env.NEXT_PUBLIC_EJS_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_EJS_PUBLIC_KEY)
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
     });
-    fetch("/api/mail", {
-      method: "post",
-      body: JSON.stringify(formData),
-    });
-    console.log(formData);
     setSubmitted(true);
   }
 
@@ -44,7 +42,7 @@ const Contact = () => {
             p={3}
           >
             <FormControl isRequired pb={5}>
-              <form action="post" onSubmit={handleOnSubmit}>
+              <form ref={form} onSubmit={handleOnSubmit}>
                 <FormLabel htmlFor="name">First name</FormLabel>
                 <Input name="name" placeholder="John Doe" mb={5} type="text" />
                 <FormLabel htmlFor="email">Email</FormLabel>

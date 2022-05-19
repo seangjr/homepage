@@ -169,10 +169,10 @@ const ProjectItem = ({ project, itemIndex, projectTransition }) => {
         title={project.title}
         handleMouseEnter={handleMouseEnter}
         handleMouseLeave={handleMouseLeave}
-        path={project.path}
+        path={`/projects/${project.slug.current}`}
       />
       <ProjectImage
-        url={project.url}
+        url={project?.mainImage}
         opacity={state.opacity}
         parallaxPos={state.parallaxPos}
         scale={state.scale}

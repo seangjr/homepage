@@ -12,9 +12,9 @@ const NotFound = () => {
   return (
     <Container mt={100}>
       <Heading as="h1">Not found</Heading>
-      <Text>
+      <Text py={3}>
         The page you&apos;re looking for is probably in another alternate
-        universe.
+        universe 😪 😵
       </Text>
       <Divider my={6} />
 

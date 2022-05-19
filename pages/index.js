@@ -74,13 +74,13 @@ export default function Home() {
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://instagram.com/awitsean" target="_blank">
+            <Link href="https://instagram.com/seangjr_" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<Icon as={IoLogoInstagram} />}
               >
-                @awitsean
+                @seangjr_
               </Button>
             </Link>
           </ListItem>
