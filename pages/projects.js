@@ -18,24 +18,24 @@ const Projects = ({ projects }) => {
             >
                 <ul ref={menuItems}>
                     {projects.map((project) => (
-                        <Section delay={0.05 * project._id} key={project._id}>
+                        <Section delay={0.05 * project._id} key={projects._id}>
                             <ProjectItem
-                                key={project._id}
+                                key={projects._id}
                                 project={project}
-                                itemIndex={project._id}
+                                itemIndex={projects._id}
                             />
                             <Box
                                 borderRadius="lg"
                                 bg={color}
                                 p={4}
                                 align="start"
-                                key={project._id}
+                                key={projects._id}
                             >
                                 <Text
                                     fontFamily="Noto Sans JP"
                                     fontSize="17px"
                                     fontWeight="300"
-                                    key={project._id}
+                                    key={projects._id}
                                 >
                                     {project.description}
                                 </Text>
