@@ -7,7 +7,7 @@ import Layout from "../../components/layouts/article";
 import { sanityClient, urlFor } from '../../sanity'
 
 const Work = ({ projects }) => (
-  <Layout title="Spewtify">
+  <Layout title={projects.title.charAt(0).toUpperCase() + projects.title.slice(1)}>
     <Container>
       <Title>
         {projects.title.charAt(0).toUpperCase() + projects.title.slice(1)} <Badge>{projects.dateStarted}</Badge>
@@ -27,16 +27,16 @@ const Work = ({ projects }) => (
           {projects.tags.map((tag, index, arr) => {
             if (!tag) return
             return index === arr.length - 1 ? (
-              <span>{tag}</span>
+              <span key={projects._id}>{tag}</span>
             ) : (
-              <span>{`${tag}, `}</span>
+              <span key={projects._id}>{`${tag}, `}</span>
             )
           })}
         </ListItem>
       </List>
       {projects?.imagesGallery.map((image) => {
         if (!image) return
-        return <WorkImage src={urlFor(image)} alt={projects.title} />
+        return <WorkImage key={projects._id} src={urlFor(image)} alt={projects.title} />
       })}
       
     </Container>
