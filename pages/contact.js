@@ -27,6 +27,7 @@ const Contact = () => {
         console.log(error.text);
     });
     setSubmitted(true);
+    console.log(form)
   }
 
   return (
