@@ -5,7 +5,7 @@ import Navbar from "../navbar";
 import VoxelDogLoader from "../voxel-dog-loader";
 import Footer from "../footer";
 
-const LazyVoxelDog = dynamic(() => import("../voxel-dog"), {
+const SkaterRabbit = dynamic(() => import("../voxel-dog"), {
   ssr: false,
   loading: () => <VoxelDogLoader />,
 });
@@ -16,9 +16,9 @@ function Main({ children, router }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Sean Relampagos</title>
-        <meta name="description" content="Sean's homepage" />
+        <meta name="description" content="Welcome to Sean's website!" />
         <meta name="author" content="Sean Relampagos" />
-        <meta name="author" content="awitsean" />
+        <meta name="author" content="seangjr_" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -33,7 +33,7 @@ function Main({ children, router }) {
       <Navbar path={router.asPath} />
 
       <Container maxW="container.md" pt={14}>
-        <LazyVoxelDog />
+        <SkaterRabbit />
         {children}
         <Footer />
       </Container>

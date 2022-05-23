@@ -15,7 +15,6 @@ import Section from "../components/section";
 import Paragraph from "../components/paragraph";
 import { IoLogoInstagram, IoLogoGithub } from "react-icons/io5";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import ReactCountryFlag from "react-country-flag";
 
 export default function Home() {
   return (
@@ -28,9 +27,7 @@ export default function Home() {
           mb={6}
           align="center"
         >
-          Hello, I&apos;m a filipino software engineer based in Singapore!{" "}
-          <ReactCountryFlag countryCode="SG" svg />{" "}
-          <ReactCountryFlag countryCode="PH" svg />
+          Hello! I am a Software Engineering student!  
         </Box>
         <Box display={{ md: "flex" }}>
           <Box flexGrow={1}>
@@ -63,11 +60,7 @@ export default function Home() {
           Bio
         </Heading>
         <Paragraph>
-          I am a software engineer with extensive experience in web development.
-          As a student, I strive for excellence in my learning by going through
-          the extra mile. I believe in giving my 110% in whatever I do. Exposure
-          to contemporary design with a well-established vocation in music has
-          sharpened my creative mind.
+          I am a year 2 software engineer student with extensive experience in web development. I♥music, playing bass and keyboard, videography, and video games.
         </Paragraph>
         <Heading as="h3" variant="section-title">
           Socials

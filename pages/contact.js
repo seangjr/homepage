@@ -34,7 +34,7 @@ const Contact = () => {
     <Container>
       <Section>
         <Box pt={5}>
-          <Section delay={0.1}>
+          <Section delay={0.4}>
             <Heading>Let&apos;s get in touch!</Heading>
           </Section>
           <Box

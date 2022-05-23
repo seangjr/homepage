@@ -2,10 +2,10 @@ import NextLink from "next/link";
 import { Heading, Box, Image, Link, Badge } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
-export const Title = ({ children }) => (
+export const Title = ({ children, cwp }) => (
   <Box>
-    <NextLink href="/projects">
-      <Link>Projects</Link>
+    <NextLink href={`/${cwp}`}>
+      <Link>{cwp.charAt(0).toUpperCase() + cwp.slice(1)}</Link>
     </NextLink>
     <span>
       {" "}

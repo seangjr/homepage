@@ -78,6 +78,9 @@ const Navbar = (props) => {
           <LinkItem href="/contact" path={path} style={{ gap: 4 }}>
             Contact
           </LinkItem>
+          <LinkItem href="/blog" path={path}>
+            Blog
+          </LinkItem>
         </Stack>
         <Box flex={1} align="right">
           <ThemeToggleButton />
@@ -98,6 +101,9 @@ const Navbar = (props) => {
                 </NextLink>
                 <NextLink href="/contact">
                   <MenuItem as={Link}>Contact</MenuItem>
+                </NextLink>
+                <NextLink href="/blog">
+                  <MenuItem as={Link}>Blog</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>

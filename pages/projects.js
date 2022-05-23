@@ -2,7 +2,7 @@ import { useRef } from "react";
 import ProjectItem from "../components/projectitem/projectitem";
 import Section from "../components/section";
 import { Container, Box, Text, useColorModeValue } from "@chakra-ui/react";
-import { sanityClient, urlFor } from '../sanity'
+import { sanityClient } from '../sanity'
 
 const Projects = ({ projects }) => {
     const menuItems = useRef(null);

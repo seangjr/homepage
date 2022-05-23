@@ -9,7 +9,7 @@ import { sanityClient, urlFor } from '../../sanity'
 const Work = ({ projects }) => (
   <Layout title={projects.title.charAt(0).toUpperCase() + projects.title.slice(1)}>
     <Container>
-      <Title>
+    <Title cwp="projects">
         {projects.title.charAt(0).toUpperCase() + projects.title.slice(1)} <Badge>{projects.dateStarted}</Badge>
       </Title>
       <P>
@@ -24,12 +24,10 @@ const Work = ({ projects }) => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          {projects.tags.map((tag, index, arr) => {
+          {projects.tags.map((tag) => {
             if (!tag) return
-            return index === arr.length - 1 ? (
-              <span key={projects._id}>{tag}</span>
-            ) : (
-              <span key={projects._id}>{`${tag}, `}</span>
+            return (
+              <Badge key={projects._id} mx={0.5}>{tag}</Badge>
             )
           })}
         </ListItem>
