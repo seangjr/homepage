@@ -5,6 +5,7 @@ import { Global } from "@emotion/react";
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
     <LinkBox cursor="pointer">
+      <Link href={href}>
       <Image
         src={thumbnail}
         alt={title}
@@ -12,7 +13,6 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
         placeholder="blur"
         loading="lazy"
       />
-      <Link href={href}>
         <Text mt={2}>{title}</Text>
       </Link>
       <Text fontSize={14}>{children}</Text>
