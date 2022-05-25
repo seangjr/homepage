@@ -13,8 +13,8 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
         placeholder="blur"
         loading="lazy"
       />
-        <Text mt={2}>{title}</Text>
       </Link>
+        <Text mt={2}>{title}</Text>
       <Text fontSize={14}>{children}</Text>
     </LinkBox>
   </Box>
