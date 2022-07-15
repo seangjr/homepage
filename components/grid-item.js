@@ -7,6 +7,9 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
     <LinkBox cursor="pointer">
       <Link href={href}>
       <Image
+        height="150px"
+        width="sm"
+        objectFit="cover"
         src={thumbnail}
         alt={title}
         className="grid-item-thumbnail"

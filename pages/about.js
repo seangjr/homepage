@@ -72,10 +72,6 @@ const About = () => {
             <QualificationYear>2021 - 2023</QualificationYear>
             Diploma in Information Technology (SE)
           </QualificationSection>
-          <QualificationSection>
-            <QualificationYear>2023 - 2025</QualificationYear>
-            Bachelor of Science in Software Engineering
-          </QualificationSection>
         </Box>
         <Divider mt={5} mb={5} />
         <strong> CV available upon request. </strong>
